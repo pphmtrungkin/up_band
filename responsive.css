@@ -137,4 +137,7 @@
     .contact-form {
         margin-top: 32px;
     }
+    .contact-form .form-control{
+        font-size: 16px;
+    }
 }
