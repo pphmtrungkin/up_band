@@ -1,0 +1,402 @@
+/*Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết 
+*/
+
+/*
+1. Vị trí 
+2. Kích thước 
+3. Màu sắc 
+4. Kiểu dáng (kiểu chữ, hình tròn,...)
+*/
+/*Common*/
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-a-quarter{
+    width: 25%;
+}
+
+.col-third {
+    width: 33.3%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+#header {
+    height: 46px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .nav-arrow-down {
+    font-size: 13px;
+}
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+
+}
+/* thẻ a là con trực tiếp của thê li*/
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 26px;
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a { 
+    color: black;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#header .list-btn,
+#header .search-btn {
+    float: right;
+    line-height: 46px;
+    padding: 0 21px;
+}
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .list-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .list-btn:hover {
+    cursor:pointer;
+    background-color: #ccc;
+}
+#header .list-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 15px;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('./img/slider/band6.0.jpg') top center / contain no-repeat rgb(13, 14, 14);
+    position: relative;
+}
+
+
+#slider .text-content {
+    position: absolute;
+    bottom: 6px;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading {
+    font-family: 'Segoe UI',Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#slider .text-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 0 0 1px #000;
+}
+
+#content .content-section {
+    font-family: 'Lato', sans-serif;
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px ;
+}
+
+#content .section-heading{
+    font-family: 'Segoe UI',Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-subheading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#content .about-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.7;
+}
+#content .member-list {
+    margin-top: 48px;
+    margin-bottom: 8px;
+}
+.text-center {
+    text-align: center;
+}
+#content  .member-ava{
+    width: 100%;
+    padding-bottom: 8px;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+#content .member-ava1,
+#content .member-ava2{
+    width: 65%;
+    padding-bottom: 8px;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
+#content .member-name{
+    font-size: 15px;
+    text-align: center;
+    margin-left: 3px;
+}
+
+/* Tour Secton*/
+#content .tour-section {
+    background-color: #000;
+}
+.text-white {
+    color: #fff;
+}
+.tickets-list {
+    list-style: none;
+    background-color: #fff;
+    margin-top: 45px;
+}
+
+.tickets-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px
+
+}
+
+.tickets-list .quantity {
+    float: right;
+    width: 50px;
+    height: 28px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top:-3px ;
+}
+
+.places-list {
+    margin-top: 16px;
+    padding-bottom: 8px;
+    margin-right: -8px;
+
+}
+.place-item{
+   width: 33%;
+}
+
+.place-ava {
+width: 100%;
+display: block;
+}
+.place-ava:hover {
+    width: 100%;
+    opacity: 0.6;
+}
+.place-body{
+    font-family: 'Lato',Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    font-size: 13px;
+    padding: 16px;
+}
+.place-heading{
+    font-size: 13px;
+    font-weight: 600;
+}
+.place-time {
+    margin-top: 15px;
+    opacity: 0.7;
+}
+.place-des {
+    margin: 13px 0;
+    line-height: 1.6
+}
+.place-des1{
+    font-style: italic;
+    margin: 30px 0 13px;
+}
+.contact-content {
+    padding: 32px 0;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+.contact-info a{
+    color: #333;
+    opacity: 0.7;
+}
+.contact-info a:hover {
+    opacity: 1;
+}
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.img-section img {
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social {
+    font-size: 24px;
+
+}
+.social a {
+    color: #000;
+    opacity: 0.8;
+    text-decoration: none;
+}
+.social a:hover {
+    opacity: 0.5;
+}
+.copyright {
+    color: #000;
+    opacity: 0.5;
+    font-size: 18px;
+    margin: 15px 0 0 2px;
+}
